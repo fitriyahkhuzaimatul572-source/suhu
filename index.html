@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Ajar Interaktif IPA - Suhu | MTsN 1 Kota Malang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #4a3321; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d97706; border-radius: 3px; }
+        .tab-content { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-[#3e2716] text-[#fffbeb] h-full flex flex-col custom-scrollbar overflow-x-hidden">
+
+    <header class="bg-[#523821] border-b border-[#785132] shadow-xl sticky top-0 z-50 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#f59e0b] to-[#d97706] flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-temperature-half text-[#fffbeb] text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base md:text-lg text-[#fffbeb] leading-tight">Materi Ajar Interaktif IPA: SUHU</h1>
+                    <p class="text-xs text-[#fde68a]">Kelas VII MTs/SMP • Disusun oleh Khuzaimatul Fitriyah, S.Si., M.Si. (MTsN 1 Kota Malang)</p>
+                </div>
+            </div>
+            
+            <nav class="flex flex-wrap gap-1.5 justify-center bg-[#3e2716] p-1.5 rounded-2xl border border-[#785132]">
+                <button onclick="switchTab('pendahuluan')" id="btn-pendahuluan" class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-[#d97706] text-white shadow-md flex items-center gap-1.5">
+                    <i class="fa-solid fa-house-chimney"></i> Pendahuluan
+                </button>
+                <button onclick="switchTab('materi')" id="btn-materi" class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-[#fde68a] hover:bg-[#523821] hover:text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-book-open"></i> Materi
+                </button>
+                <button onclick="switchTab('lab')" id="btn-lab" class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-[#fde68a] hover:bg-[#523821] hover:text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-flask"></i> Lab Virtual
+                </button>
+                <button onclick="switchTab('game')" id="btn-game" class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-[#fde68a] hover:bg-[#523821] hover:text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-gamepad"></i> Menara Game
+                </button>
+                <button onclick="switchTab('quiz')" id="btn-quiz" class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-[#fde68a] hover:bg-[#523821] hover:text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-brain"></i> Quiz HOTS/LOTS
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 overflow-y-auto">
+
+        <section id="tab-pendahuluan" class="tab-content space-y-6">
+            <div class="bg-gradient-to-r from-[#523821] to-[#684729] border border-[#8c5d38] rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+                <div class="absolute right-0 top-0 translate-x-8 -translate-y-8 opacity-10 pointer-events-none">
+                    <i class="fa-solid fa-temperature-three-quarters text-[200px] text-[#fffbeb]"></i>
+                </div>
+                <div class="max-w-2xl relative z-10">
+                    <span class="inline-block px-3.5 py-1 bg-[#d97706] text-white text-xs font-bold rounded-full mb-3 shadow">Modul Pembelajaran Kurikulum Merdeka</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-[#fffbeb] mb-3">Selamat Datang di Dunia Suhu & Kalor</h2>
+                    <p class="text-[#fef3c7] text-sm md:text-base leading-relaxed mb-6">
+                        Anak-anak hebat MTsN 1 Kota Malang, pernahkah kalian merasa udara terasa sangat dingin di pagi hari pegunungan, namun terasa hangat di siang hari? Mari kita pelajari bersama bagaimana derajat panas atau dingin suatu benda diukur dan dipahami secara ilmiah!
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <button onclick="switchTab('materi')" class="px-5 py-2.5 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-sm rounded-2xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                            <span>Mulai Belajar Materi</span> <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button onclick="switchTab('lab')" class="px-5 py-2.5 bg-[#785132] hover:bg-[#684729] text-[#fffbeb] font-bold text-sm rounded-2xl border border-[#9a653c] shadow-lg transition">
+                            <i class="fa-solid fa-flask mr-2"></i> Buka Lab Virtual
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-[#523821] border border-[#785132] rounded-3xl p-6 shadow-xl">
+                    <h3 class="text-lg font-bold text-[#fffbeb] mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye text-[#f59e0b]"></i> Tujuan Pembelajaran
+                    </h3>
+                    <ul class="space-y-3 text-sm text-[#fef3c7]">
+                        <li class="flex items-start gap-3 bg-[#3e2716] p-3 rounded-2xl border border-[#684729]">
+                            <span class="w-6 h-6 rounded-full bg-[#d97706] text-white text-xs flex items-center justify-center shrink-0 font-bold">1</span>
+                            <span>Menjelaskan konsep suhu sebagai ukuran derajat panas atau dingin suatu benda secara tepat.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-[#3e2716] p-3 rounded-2xl border border-[#684729]">
+                            <span class="w-6 h-6 rounded-full bg-[#d97706] text-white text-xs flex items-center justify-center shrink-0 font-bold">2</span>
+                            <span>Memahami berbagai jenis termometer (zat cair dan digital) beserta prinsip kerjanya.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-[#3e2716] p-3 rounded-2xl border border-[#684729]">
+                            <span class="w-6 h-6 rounded-full bg-[#d97706] text-white text-xs flex items-center justify-center shrink-0 font-bold">3</span>
+                            <span>Melakukan konversi skala termometer (Celcius, Reamur, Fahrenheit, dan Kelvin) dengan teliti.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#523821] border border-[#785132] rounded-3xl p-6 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-[#fffbeb] mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-id-badge text-[#f59e0b]"></i> Informasi Pendidik
+                        </h3>
+                        <div class="bg-[#3e2716] p-4 rounded-2xl border border-[#684729] space-y-2 text-sm text-[#fef3c7]">
+                            <p><strong class="text-[#fffbeb]">Mata Pelajaran:</strong> Ilmu Pengetahuan Alam (IPA)</p>
+                            <p><strong class="text-[#fffbeb]">Jenjang:</strong> MTs / SMP Kelas VII</p>
+                            <p><strong class="text-[#fffbeb]">Penyusun:</strong> Khuzaimatul Fitriyah, S.Si., M.Si.</p>
+                            <p><strong class="text-[#fffbeb]">Instansi:</strong> MTsN 1 Kota Malang</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-[#785132] text-xs text-[#fde68a] text-center italic">
+                        "Belajar Sains dengan Semangat, Kreatif, dan Menyenangkan."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-materi" class="tab-content hidden space-y-6">
+            <div class="bg-[#523821] border border-[#785132] rounded-3xl p-6 md:p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-[#fffbeb] mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark text-[#f59e0b]"></i> Ringkasan Materi: Suhu dan Pengukurannya
+                </h2>
+                
+                <div class="space-y-6 text-[#fef3c7] text-sm md:text-base leading-relaxed">
+                    <div class="bg-[#3e2716] p-5 rounded-2xl border border-[#684729]">
+                        <h3 class="font-bold text-lg text-[#fffbeb] mb-2 flex items-center gap-2">
+                            <span class="text-[#f59e0b]">A.</span> Apakah Suhu Itu?
+                        </h3>
+                        <p>
+                            Suhu adalah besaran yang menyatakan derajat panas atau dinginnya suatu benda. Ketika kita menyentuh air es, terasa dingin. Ketika menyentuh air hangat, terasa panas. Namun, indra peraba kita (kulit) tidak dapat mengukur suhu secara akurat dan objektif karena bersifat relatif. Oleh karena itu, dibutuhkan alat ukur yang disebut <strong>termometer</strong>.
+                        </p>
+                    </div>
+
+                    <div class="bg-[#3e2716] p-5 rounded-2xl border border-[#684729]">
+                        <h3 class="font-bold text-lg text-[#fffbeb] mb-2 flex items-center gap-2">
+                            <span class="text-[#f59e0b]">B.</span> Jenis-Jenis Termometer
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+                            <div class="bg-[#523821] p-4 rounded-xl border border-[#785132]">
+                                <h4 class="font-bold text-[#fffbeb] mb-1">1. Termometer Zat Cair</h4>
+                                <p class="text-xs text-[#fde68a]">Menggunakan pengisi air raksa atau alkohol. Raksa banyak dipilih karena tidak membasahi dinding kaca dan cepat menyerap panas.</p>
+                            </div>
+                            <div class="bg-[#523821] p-4 rounded-xl border border-[#785132]">
+                                <h4 class="font-bold text-[#fffbeb] mb-1">2. Termometer Klinis</h4>
+                                <p class="text-xs text-[#fde68a]">Digunakan untuk mengukur suhu tubuh manusia (35°C - 42°C) dengan adanya lekukan sempit di atas reservoir agar raksa tidak segera turun.</p>
+                            </div>
+                            <div class="bg-[#523821] p-4 rounded-xl border border-[#785132]">
+                                <h4 class="font-bold text-[#fffbeb] mb-1">3. Termometer Digital</h4>
+                                <p class="text-xs text-[#fde68a]">Memanfaatkan sensor elektronik (termokopel) untuk mendeteksi suhu dan menampilkan angka secara langsung pada layar LCD.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#3e2716] p-5 rounded-2xl border border-[#684729]">
+                        <h3 class="font-bold text-lg text-[#fffbeb] mb-2 flex items-center gap-2">
+                            <span class="text-[#f59e0b]">C.</span> Skala Termometer & Perbandingan
+                        </h3>
+                        <p class="mb-3">
+                            Empat skala termometer utama di dunia adalah <strong>Celcius (C), Reamur (R), Fahrenheit (F), dan Kelvin (K)</strong>. Skala ini didasarkan pada titik tetap bawah (suhu es melebur) dan titik tetap atas (suhu air mendidih pada tekanan 1 atm).
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                            <div class="bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                                <div class="font-bold text-[#fffbeb]">Celcius</div>
+                                <div class="text-xs text-[#fde68a]">Bawah: 0° | Atas: 100°</div>
+                                <div class="text-xs font-semibold text-[#f59e0b] mt-1">Perbandingan: 5</div>
+                            </div>
+                            <div class="bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                                <div class="font-bold text-[#fffbeb]">Reamur</div>
+                                <div class="text-xs text-[#fde68a]">Bawah: 0° | Atas: 80°</div>
+                                <div class="text-xs font-semibold text-[#f59e0b] mt-1">Perbandingan: 4</div>
+                            </div>
+                            <div class="bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                                <div class="font-bold text-[#fffbeb]">Fahrenheit</div>
+                                <div class="text-xs text-[#fde68a]">Bawah: 32° | Atas: 212°</div>
+                                <div class="text-xs font-semibold text-[#f59e0b] mt-1">Perbandingan: 9 (+32)</div>
+                            </div>
+                            <div class="bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                                <div class="font-bold text-[#fffbeb]">Kelvin</div>
+                                <div class="text-xs text-[#fde68a]">Bawah: 273 | Atas: 373</div>
+                                <div class="text-xs font-semibold text-[#f59e0b] mt-1">Perbandingan: 5 (+273)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-lab" class="tab-content hidden space-y-6">
+            <div class="bg-[#523821] border border-[#785132] rounded-3xl p-6 md:p-8 shadow-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#fffbeb] flex items-center gap-2">
+                            <i class="fa-solid fa-flask-vial text-[#f59e0b]"></i> Laboratorium Virtual Konversi Suhu
+                        </h2>
+                        <p class="text-xs text-[#fde68a]">Uji coba langsung perubahan suhu air dan lihat konversinya pada skala termometer secara interaktif.</p>
+                    </div>
+                    <div class="flex items-center gap-2 bg-[#3e2716] px-4 py-2 rounded-2xl border border-[#785132]">
+                        <span class="text-xs text-[#fde68a]">Suhu Celcius:</span>
+                        <span id="lab-val-display" class="font-bold text-[#fffbeb] text-base">25 °C</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                    <div class="bg-[#3e2716] p-6 rounded-2xl border border-[#684729] space-y-4">
+                        <label class="block text-sm font-bold text-[#fffbeb]">Atur Suhu Air (°C):</label>
+                        <input type="range" id="temp-slider" min="0" max="100" value="25" class="w-full accent-[#d97706] cursor-pointer" oninput="updateLab(this.value)">
+                        
+                        <div class="flex justify-between text-xs text-[#fde68a]">
+                            <span>0 °C (Es Melebur)</span>
+                            <span>50 °C</span>
+                            <span>100 °C (Mendidih)</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#684729] space-y-2 text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-[#fde68a]">Kondisi Zat:</span>
+                                <span id="lab-state" class="font-bold text-[#fffbeb]">Cair (Normal)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-[#fde68a]">Warna Termometer:</span>
+                                <span id="lab-color-desc" class="font-bold text-[#fffbeb]">Sejuk / Sedang</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#3e2716] p-6 rounded-2xl border border-[#684729] flex flex-col items-center justify-center relative min-h-[260px]">
+                        <div class="relative w-36 h-48 flex items-end justify-center">
+                            <svg class="w-full h-full drop-shadow-md" viewBox="0 0 100 130">
+                                <path d="M20,10 L80,10 L85,120 C85,125 80,128 75,128 L25,128 C20,128 15,125 15,120 Z" fill="none" stroke="#fde68a" stroke-width="4" stroke-linejoin="round"/>
+                                <path id="beaker-liquid" d="M17,65 L83,65 L84.5,120 C84.5,124 81,126 75,126 L25,126 C19,126 15.5,124 15.5,120 Z" fill="#d97706" opacity="0.7"/>
+                                <rect x="15" y="6" width="70" height="6" rx="3" fill="#fde68a"/>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span id="beaker-text" class="text-lg font-extrabold text-white drop-shadow">25 °C</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-[#fde68a] mt-3 text-center">Simulasi Wadah Air & Perubahan Suhu</p>
+                    </div>
+
+                    <div class="bg-[#3e2716] p-6 rounded-2xl border border-[#684729] space-y-3">
+                        <h3 class="text-sm font-bold text-[#fffbeb] mb-2"><i class="fa-solid fa-calculator text-[#f59e0b] mr-2"></i>Hasil Konversi Skala:</h3>
+                        <div class="flex justify-between items-center bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                            <span class="text-xs text-[#fde68a]">Reamur (R):</span>
+                            <span id="conv-r" class="font-bold text-[#fffbeb]">20.0 °R</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                            <span class="text-xs text-[#fde68a]">Fahrenheit (F):</span>
+                            <span id="conv-f" class="font-bold text-[#fffbeb]">77.0 °F</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-[#523821] p-3 rounded-xl border border-[#785132]">
+                            <span class="text-xs text-[#fde68a]">Kelvin (K):</span>
+                            <span id="conv-k" class="font-bold text-[#fffbeb]">298.15 K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-game" class="tab-content hidden space-y-6">
+            <div class="bg-[#523821] border border-[#785132] rounded-3xl p-6 md:p-8 shadow-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#fffbeb] flex items-center gap-2">
+                            <i class="fa-solid fa-chess-rook text-[#f59e0b]"></i> Menara Game: Susun Balok Suhu
+                        </h2>
+                        <p class="text-xs text-[#fde68a]">Susun balok dengan menjawab pertanyaan suhu dengan benar untuk membangun menara tertinggi!</p>
+                    </div>
+                    <div class="flex gap-3 bg-[#3e2716] px-4 py-2 rounded-2xl border border-[#785132]">
+                        <div class="text-xs"><span class="text-[#fde68a]">Tinggi Menara:</span> <span id="tower-score" class="font-bold text-[#fffbeb]">0</span> Tingkat</div>
+                        <div class="text-xs border-l border-[#785132] pl-3"><span class="text-[#fde68a]">Skor:</span> <span id="tower-points" class="font-bold text-[#fffbeb]">0</span> Poin</div>
+                    </div>
+                </div>
+
+                <div id="game-container" class="bg-[#3e2716] p-6 rounded-2xl border border-[#684729] min-h-[320px] flex flex-col items-center justify-center text-center">
+                    <div id="game-start-screen" class="space-y-4 max-w-md">
+                        <div class="w-16 h-16 bg-[#d97706] rounded-full flex items-center justify-center mx-auto text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-tower-observation"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#fffbeb]">Tantangan Menara Suhu</h3>
+                        <p class="text-xs text-[#fde68a]">Jawab pertanyaan cepat seputar suhu untuk meletakkan balok menara satu persatu hingga mencapai puncak!</p>
+                        <button onclick="startTowerGame()" class="px-6 py-2.5 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-sm rounded-2xl shadow-lg transition">
+                            Mulai Membangun
+                        </button>
+                    </div>
+
+                    <div id="game-play-screen" class="hidden w-full max-w-lg space-y-4 text-left">
+                        <div class="flex justify-between items-center text-xs text-[#fde68a]">
+                            <span id="game-progress-label">Tingkat 1 dari 5</span>
+                            <span id="game-timer">Waktu: 30s</span>
+                        </div>
+                        <div class="bg-[#523821] p-4 rounded-xl border border-[#785132]">
+                            <p id="game-question" class="text-sm font-semibold text-[#fffbeb] mb-3">Pertanyaan akan muncul di sini...</p>
+                            <div id="game-options" class="grid grid-cols-1 gap-2"></div>
+                        </div>
+                    </div>
+
+                    <div id="game-over-screen" class="hidden space-y-4 max-w-md">
+                        <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#fffbeb]">Menara Selesai Dibangun!</h3>
+                        <p id="game-final-msg" class="text-sm text-[#fef3c7]">Hebat! Kamu berhasil membangun menara sains dengan kokoh.</p>
+                        <button onclick="startTowerGame()" class="px-6 py-2.5 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-sm rounded-2xl shadow-lg transition">
+                            Main Lagi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-quiz" class="tab-content hidden space-y-6">
+            <div class="bg-[#523821] border border-[#785132] rounded-3xl p-6 md:p-8 shadow-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-[#fffbeb] flex items-center gap-2">
+                            <i class="fa-solid fa-circle-question text-[#f59e0b]"></i> Quiz Interaktif (HOTS & LOTS)
+                        </h2>
+                        <p class="text-xs text-[#fde68a]">Uji pemahamanmu melalui 10 soal pilihan ganda berkualitas untuk siswa MTsN 1 Kota Malang.</p>
+                    </div>
+                    <div id="quiz-status-badge" class="bg-[#3e2716] px-4 py-2 rounded-2xl border border-[#785132] text-xs text-[#fde68a]">
+                        Soal <span id="current-q-num" class="font-bold text-[#fffbeb]">1</span> dari 10
+                    </div>
+                </div>
+
+                <div id="quiz-card-container" class="bg-[#3e2716] p-6 rounded-2xl border border-[#684729] space-y-5">
+                    <div id="quiz-intro" class="text-center space-y-4 py-6">
+                        <div class="w-16 h-16 bg-[#d97706] rounded-full flex items-center justify-center mx-auto text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-[#fffbeb]">Siap Mengerjakan Quiz Suhu?</h3>
+                        <p class="text-xs text-[#fde68a] max-w-md mx-auto">Quiz ini terdiri dari 5 soal tingkat pemahaman (LOTS) dan 5 soal penalaran analitis (HOTS). Kerjakan dengan teliti!</p>
+                        <button onclick="startQuiz()" class="px-6 py-2.5 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-sm rounded-2xl shadow-lg transition">
+                            Mulai Kerjakan Sekarang
+                        </button>
+                    </div>
+
+                    <div id="quiz-active" class="hidden space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span id="quiz-type-tag" class="px-3 py-1 bg-[#785132] text-[#fffbeb] text-xs font-bold rounded-full">LOTS</span>
+                            <span class="text-xs text-[#fde68a]">Skor Sementara: <span id="quiz-live-score" class="font-bold text-[#fffbeb]">0</span></span>
+                        </div>
+                        <h3 id="quiz-question-text" class="text-base md:text-lg font-bold text-[#fffbeb] leading-snug">Pertanyaan quiz akan tampil di sini...</h3>
+                        <div id="quiz-options-list" class="grid grid-cols-1 gap-3 pt-2"></div>
+                    </div>
+
+                    <div id="quiz-result" class="hidden text-center space-y-4 py-6">
+                        <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl shadow-lg">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#fffbeb]">Quiz Selesai!</h3>
+                        <p class="text-sm text-[#fef3c7]">Skor Akhir Kamu:</p>
+                        <div class="text-4xl font-extrabold text-[#f59e0b]" id="final-score-display">0 / 100</div>
+                        <p id="quiz-eval-msg" class="text-xs text-[#fde68a] max-w-md mx-auto">Kerja bagus! Terus tingkatkan semangat belajarmu.</p>
+                        <button onclick="resetQuiz()" class="px-6 py-2.5 bg-[#d97706] hover:bg-[#b45309] text-white font-bold text-sm rounded-2xl shadow-lg transition">
+                            Ulangi Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#523821] border-t border-[#785132] py-4 text-center text-xs text-[#fde68a]">
+        <p>&copy; 2026 Materi Ajar IPA Suhu • MTsN 1 Kota Malang • Disusun oleh Khuzaimatul Fitriyah, S.Si., M.Si.</p>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            const tabs = ['pendahuluan', 'materi', 'lab', 'game', 'quiz'];
+            tabs.forEach(t => {
+                const el = document.getElementById('tab-' + t);
+                const btn = document.getElementById('btn-' + t);
+                if (t === tabId) {
+                    el.classList.remove('hidden');
+                    btn.className = "px-3 py-1.5 rounded-xl text-xs font-semibold transition-all bg-[#d97706] text-white shadow-md flex items-center gap-1.5";
+                } else {
+                    el.classList.add('hidden');
+                    btn.className = "px-3 py-1.5 rounded-xl text-xs font-semibold transition-all text-[#fde68a] hover:bg-[#523821] hover:text-white flex items-center gap-1.5";
+                }
+            });
+        }
+
+        function updateLab(val) {
+            const c = parseFloat(val);
+            document.getElementById('lab-val-display').innerText = c + " °C";
+            document.getElementById('beaker-text').innerText = c + " °C";
+
+            const r = c * 0.8;
+            const f = (c * 9/5) + 32;
+            const k = c + 273.15;
+
+            document.getElementById('conv-r').innerText = r.toFixed(1) + " °R";
+            document.getElementById('conv-f').innerText = f.toFixed(1) + " °F";
+            document.getElementById('conv-k').innerText = k.toFixed(2) + " K";
+
+            let state = "Cair (Normal)";
+            let colorDesc = "Sejuk / Sedang";
+            let liquidColor = "#d97706";
+
+            if (c <= 0) {
+                state = "Padat / Membeku";
+                colorDesc = "Sangat Dingin";
+                liquidColor = "#0284c7";
+            } else if (c >= 100) {
+                state = "Gas / Mendidih";
+                colorDesc = "Sangat Panas";
+                liquidColor = "#dc2626";
+            } else if (c > 60) {
+                state = "Cair (Panas)";
+                colorDesc = "Hangat Menuju Panas";
+                liquidColor = "#ea580c";
+            }
+
+            document.getElementById('lab-state').innerText = state;
+            document.getElementById('lab-color-desc').innerText = colorDesc;
+            document.getElementById('beaker-liquid').setAttribute('fill', liquidColor);
+
+            const liquidPath = document.getElementById('beaker-liquid');
+            const heightFactor = 65 + (100 - c) * 0.55;
+            liquidPath.setAttribute('d', `M17,${heightFactor} L83,${heightFactor} L84.5,120 C84.5,124 81,126 75,126 L25,126 C19,126 15.5,124 15.5,120 Z`);
+        }
+
+        const towerQuestions = [
+            { q: "Alat yang digunakan untuk mengukur suhu benda dengan akurat disebut...", options: ["Neraca", "Termometer", "Mistar", "Barometer"], correct: 1 },
+            { q: "Titik tetap atas pada termometer Celcius adalah...", options: ["0 °C", "32 °C", "100 °C", "212 °C"], correct: 2 },
+            { q: "Zat cair pengisi termometer yang banyak digunakan karena tidak membasahi dinding kaca adalah...", options: ["Air", "Minyak", "Raksa", "Sirup"], correct: 2 },
+            { q: "Suhu 40 °C jika dikonversi ke Reamur menjadi...", options: ["32 °R", "50 °R", "48 °R", "36 °R"], correct: 0 },
+            { q: "Suhu mutlak dalam sistem Satuan Internasional (SI) menggunakan satuan...", options: ["Celcius", "Fahrenheit", "Kelvin", "Reamur"], correct: 2 }
+        ];
+        let currentGameIndex = 0;
+        let towerScore = 0;
+        let towerPoints = 0;
+
+        function startTowerGame() {
+            currentGameIndex = 0;
+            towerScore = 0;
+            towerPoints = 0;
+            document.getElementById('tower-score').innerText = towerScore;
+            document.getElementById('tower-points').innerText = towerPoints;
+            document.getElementById('game-start-screen').classList.add('hidden');
+            document.getElementById('game-over-screen').classList.add('hidden');
+            document.getElementById('game-play-screen').classList.remove('hidden');
+            loadGameQuestion();
+        }
+
+        function loadGameQuestion() {
+            if (currentGameIndex >= towerQuestions.length) {
+                endTowerGame();
+                return;
+            }
+            const qData = towerQuestions[currentGameIndex];
+            document.getElementById('game-progress-label').innerText = `Tingkat ${currentGameIndex + 1} dari ${towerQuestions.length}`;
+            document.getElementById('game-question').innerText = qData.q;
+            const optList = document.getElementById('game-options');
+            optList.innerHTML = '';
+            qData.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-3 rounded-xl bg-[#3e2716] border border-[#684729] hover:border-[#f59e0b] text-xs text-[#fffbeb] transition font-medium flex items-center justify-between";
+                btn.innerHTML = `<span>${opt}</span> <i class="fa-solid fa-chevron-right text-[10px] text-[#fde68a]"></i>`;
+                btn.onclick = () => checkGameAnswer(idx, qData.correct);
+                optList.appendChild(btn);
+            });
+        }
+
+        function checkGameAnswer(selected, correct) {
+            if (selected === correct) {
+                towerScore++;
+                towerPoints += 20;
+                document.getElementById('tower-score').innerText = towerScore;
+                document.getElementById('tower-points').innerText = towerPoints;
+                currentGameIndex++;
+                loadGameQuestion();
+            } else {
+                alert("Kurang tepat! Coba ingat kembali materi suhu ya.");
+            }
+        }
+
+        function endTowerGame() {
+            document.getElementById('game-play-screen').classList.add('hidden');
+            document.getElementById('game-over-screen').classList.remove('hidden');
+            document.getElementById('game-final-msg').innerText = `Luar biasa! Menara sainsmu berhasil mencapai tingkat ${towerScore} dengan total ${towerPoints} poin!`;
+        }
+
+        const quizQuestions = [
+            { type: "LOTS", q: "1. Apakah definisi yang paling tepat mengenai suhu?", options: ["Jumlah energi panas total dalam suatu benda", "Derajat panas atau dinginnya suatu zat atau benda", "Besaran yang menyatakan massa jenis zat", "Kadar kelembapan udara di suatu tempat"], correct: 1 },
+            { type: "LOTS", q: "2. Titik lebur es atau titik tetap bawah pada termometer Celcius bernilai...", options: ["0 °C", "32 °C", "100 °C", "273 °C"], correct: 0 },
+            { type: "LOTS", q: "3. Alasan utama mengapa zat cair seperti raksa sering digunakan dalam termometer adalah...", options: ["Warnanya yang bening seperti air", "Mudah membasahi dinding kaca tabung", "Tidak membasahi dinding kaca dan cepat menyerap panas", " Harganya sangat murah di pasaran"], correct: 2 },
+            { type: "LOTS", q: "4. Alat ukur khusus yang biasanya digunakan di rumah sakit untuk mengukur suhu tubuh manusia adalah...", options: ["Termometer maksimum-minimum", "Termometer klinis", "Termometer laboratorium", "Termometer gas"], correct: 1 },
+            { type: "LOTS", q: "5. Perbandingan skala termometer Celcius (C) dan Reamur (R) adalah...", options: ["5 : 4", "4 : 5", "5 : 9", "9 : 5"], correct: 0 },
+            { type: "HOTS", q: "6. Suhu suatu zat menunjukkan angka 60 °C. Jika diukur menggunakan termometer Fahrenheit, berapakah nilai suhu tersebut?", options: ["108 °F", "140 °F", "76 °F", "92 °F"], correct: 1 },
+            { type: "HOTS", q: "7. Mengapa pada sambungan rel kereta api sengaja diberi celah atau jarak renggang di antara dua batang besi?", options: ["Agar kereta berjalan lebih kencang", "Untuk menghemat bahan pembuatan besi rel", "Untuk memberikan ruang pemuaian saat besi menyerap panas di siang hari", "Agar suara gesekan roda kereta tidak terlalu bising"], correct: 2 },
+            { type: "HOTS", q: "8. Seorang siswa mengukur suhu air menggunakan termometer Celcius dan menunjukkan angka 50 °C. Jika ia mengonversinya ke dalam skala Kelvin, berapakah hasilnya?", options: ["223.15 K", "323.15 K", "273.15 K", "373.15 K"], correct: 1 },
+            { type: "HOTS", q: "9. Termometer X memiliki titik tetap bawah -10 °X dan titik tetap atas 90 °X. Jika suatu benda menunjukkan angka 35 °C pada termometer Celcius, berapakah pembacaan pada termometer X?", options: ["25 °X", "30 °X", "40 °X", "20 °X"], correct: 0 },
+            { type: "HOTS", q: "10. Dua wadah berisi air dengan massa sama memiliki suhu awal masing-masing 20 °C dan 80 °C dicampurkan. Analisislah mengapa suhu akhir campuran air tersebut berada di kisaran antara 20 °C hingga 80 °C?", options: ["Terjadi penambahan zat kimia baru", "Panas mengalir dari benda bersuhu lebih tinggi ke lebih rendah hingga tercapai keseimbangan termal", "Air mengalami pendinginan buatan oleh udara sekitar", "Massa air bertambah dua kali lipat"], correct: 1 }
+        ];
+
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+
+        function startQuiz() {
+            currentQuizIndex = 0;
+            quizScore = 0;
+            document.getElementById('quiz-intro').classList.add('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-active').classList.remove('hidden');
+            loadQuizQuestion();
+        }
+
+        function loadQuizQuestion() {
+            if (currentQuizIndex >= quizQuestions.length) {
+                endQuiz();
+                return;
+            }
+            const q = quizQuestions[currentQuizIndex];
+            document.getElementById('current-q-num').innerText = currentQuizIndex + 1;
+            document.getElementById('quiz-type-tag').innerText = q.type;
+            document.getElementById('quiz-type-tag').className = q.type === 'HOTS' ? "px-3 py-1 bg-[#d97706] text-white text-xs font-bold rounded-full" : "px-3 py-1 bg-[#785132] text-[#fffbeb] text-xs font-bold rounded-full";
+            document.getElementById('quiz-question-text').innerText = q.q;
+            document.getElementById('quiz-live-score').innerText = quizScore;
+
+            const optList = document.getElementById('quiz-options-list');
+            optList.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-3.5 rounded-xl bg-[#523821] border border-[#785132] hover:border-[#f59e0b] text-xs md:text-sm text-[#fffbeb] transition font-medium flex items-center justify-between";
+                btn.innerHTML = `<span>${opt}</span> <i class="fa-solid fa-angle-right text-xs text-[#fde68a]"></i>`;
+                btn.onclick = () => answerQuiz(idx, q.correct);
+                optList.appendChild(btn);
+            });
+        }
+
+        function answerQuiz(selected, correct) {
+            if (selected === correct) {
+                quizScore += 10;
+            }
+            currentQuizIndex++;
+            loadQuizQuestion();
+        }
+
+        function endQuiz() {
+            document.getElementById('quiz-active').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            document.getElementById('final-score-display').innerText = quizScore + " / 100";
+            
+            let evalMsg = "Luar biasa! Pemahamanmu sangat mendalam tentang materi Suhu.";
+            if (quizScore < 60) {
+                evalMsg = "Cukup baik, mari pelajari kembali ringkasan materi dan coba lagi ya!";
+            } else if (quizScore < 85) {
+                evalMsg = "Hebat! Kamu sudah memahami sebagian besar konsep suhu dengan baik.";
+            }
+            document.getElementById('quiz-eval-msg').innerText = evalMsg;
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-intro').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
